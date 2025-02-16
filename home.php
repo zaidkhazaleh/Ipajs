@@ -15,6 +15,45 @@
 </div>
 
 <!-- قسم الاشتراك الجديد -->
+<div id="lscld"></div>
+
+<section class="container__electronic_cards">
+    <div class="layout">
+        <?php if(is_array($cards)):?>
+        <?php foreach ($cards as $card):?>
+        <article class="electronic_card">
+            <div class="top">
+                <div class="electronic_card__image" style="background-image: url(<?= BASE_URL . GET_FILE_PATH_BY_CODE($card['image'])?>)"></div>
+                <div class="wrapper">
+                    <div class="up">
+                        <div class="electronic_card__header"><?= SITE_LANG == 'ar' ? $card['ar_name'] : $card['en_name']?></div>
+                    </div>
+                    <a href="<?=BASE_URL?>cards/<?= str_replace(' ', '-', $card['en_name'])?>">
+                        <div class="down">
+                            <div class="details__button">
+                                <span><?= LANG['brows_btn']?></span><i class="scarlab-arrow-right" data-scarlab="arrow-right"></i>     
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="diamond__divider_electcards"></div>
+        </article>
+        <?php endforeach;?>
+        <?php else:?>
+        <div class="col-12">
+            <?= Messages::alert('info', LANG['attention'], LANG['index_p'][46])?>
+        </div>
+        <?php endif;?>
+    </div>
+</section>
+
+<!-- سكريبت قسم الاشتراك الجديد -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    var targetElement = document.getElementById('lscld');
+    if (targetElement) {
+        targetElement.innerHTML = `
 <div class="custom-subscription-container">
     <div class="custom-video-frame">
         <div class="custom-frame-header">طريقة شراء المُنتجات بكل سهولة</div>
@@ -121,3 +160,4 @@
     }
 }
 </style>
+</script>
