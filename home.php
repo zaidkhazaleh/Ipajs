@@ -40,17 +40,17 @@
 }
 
 .custom-video-frame {
-    border: 3px solid #004085;
+    border: 3px solid linear-gradient(118.36deg, #170430 11.39%, #4B0D6D 50.15%, #7A1C9A 87.89%);
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
     position: relative;
-    background: #f8f9fa;
+    background: linear-gradient(118.36deg, #170430 11.39%, #4B0D6D 50.15%, #7A1C9A 87.89%);
     padding: 15px;
 }
 
 .custom-frame-header {
-    background: #004085;
+    background: linear-gradient(118.36deg, #170430 11.39%, #4B0D6D 50.15%, #7A1C9A 87.89%);
     color: white;
     padding: 15px;
     text-align: center;
@@ -83,7 +83,7 @@
 .custom-video-description {
     text-align: center;
     font-size: 1rem;
-    color: #333;
+    color: #fff;
     margin-top: 15px;
     font-weight: 500;
 }
